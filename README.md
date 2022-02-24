@@ -1,4 +1,4 @@
-# obard-2022
+# obard-2022 ✈
 
 A plane booking/reservation app.
 
