@@ -1,0 +1,21 @@
+html {
+  background: rgb(3,44,69);
+  background: linear-gradient(112.87deg, #FFFFFF 0%, #E9F0F3 51.09%, #9CB9CA 100%);;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+  color: #032C45;
+}
+.navBar {
+  list-style: none;
+  display: flex;
+  text-transform: uppercase;
+  color: #9CB9CA;
+  text-decoration: none;
+  font-size: 26px;
+}
+a:visited {
+  color: #9CB9CA;
+  text-decoration: none;
+}
