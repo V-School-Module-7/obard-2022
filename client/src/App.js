@@ -1,11 +1,13 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom";
 import Navbar from "./Components/Navbar";
+import About from "./Pages/About";
 import Reservation from "./Pages/Reservation";
 // import Confirmation from "./Pages/Confirmation"
 // import Summary from "./Pages/Summary";
 import PaymentAndLicenseVerification from "./Pages/PaymentAndLicenseVerification";
 //import CheckoutForm from "./CheckoutForm";
+
 import "./app.css"
 
 
@@ -28,7 +30,6 @@ export default function App(){
             element={<PaymentAndLicenseVerification />}
             />
           </Routes>
-
     </div>
   )
 }
