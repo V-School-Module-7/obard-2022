@@ -13,32 +13,31 @@ app.use(bodyParser.urlencoded({ extended: true }))
 app.use(bodyParser.json())
 app.use(cors())
 
+app.post("/api/payment", cors(), async (req, res) => {
+  try {
+    const { amount, source, receipt_email } = req.body
 
+    const charge = await stripe.charges.create({
+      amount,
+      currency: 'usd',
+      source,
+      receipt_email: "zapiencg@gmail.com",
+      description: "$10 Reservation Fee"
+    })
 
-app.post("/payment", cors(), async (req, res) => {
-	let { amount, id } = req.body
-	try {
-		const payment = await stripe.paymentIntents.create({
-			amount,
-			currency: "USD",
-			description: "Reservation Fee",
-			payment_method: id,
-			confirm: true
-		})
-		console.log("Payment", payment)
-		res.json({
-			message: "Payment successful",
-			success: true
-		})
-	} catch (error) {
-		console.log("Error", error)
-		res.json({
-			message: "Payment failed",
-			success: false
-		})
-	}
+    if (!charge) throw new Error('charge unsuccessful')
+
+    res.status(200).json({
+      charge,
+      message: 'charge posted successfully'
+    })
+  } catch (error) {
+    res.status(500).json({
+      message: error.message
+    })
+  }
 })
 
 app.listen(port, () => {
-  console.log(`App listening at https://localhost:${port}`)
+  console.log(`App listening at http://localhost:${port}`)
 })
