@@ -11,6 +11,8 @@ html {
 .navBar {
   list-style: none;
   display: flex;
+  justify-content: space-between;
+  
   text-transform: uppercase;
   color: #9CB9CA;
   text-decoration: none;
@@ -23,7 +25,7 @@ li{
   margin-right: 40px;
   color: #3E6B87;
 }
-a:visited {
+a {
   color: #9CB9CA;
   text-decoration: none;
 }

@@ -1,18 +1,23 @@
 import React from "react";
 import { FaHome } from "react-icons/fa"
+import { useNavigate } from "react-router-dom";
 
-const page = {
-  backgroundColor: "#FFFFFF",
-  boxShadow: "0px 21px 35px rgba(121, 151, 170, 0.67)",
-  //position: "absolute",
-  width: "1300px",
-  height: "600px",
-  //left: "100px",
-  //top: "90px",
-  textAlign: "center",
-  margin: "auto"
-}
 export default function Success(){
+  const page = {
+    backgroundColor: "#FFFFFF",
+    boxShadow: "0px 21px 35px rgba(121, 151, 170, 0.67)",
+    //position: "absolute",
+    width: "1300px",
+    height: "600px",
+    //left: "100px",
+    //top: "90px",
+    textAlign: "center",
+    margin: "auto"
+  }
+  const navigate = useNavigate()
+  const backToHome = () => {
+    navigate("/reservation")
+  }
   return (
     <div style={page}>
       <div>
@@ -29,8 +34,8 @@ export default function Success(){
           <p style={{fontWeight: "bold"}}>You will receive another email confirming reservation after license and insurance is verified.</p>
         </div>
         <div style={{}}>
-          <FaHome style={{color: "#567384", height: "75px", width: "60px"}}/>
-          <p style={{color: "#567384"}}>Back Home</p>
+          <p><FaHome style={{color: "#567384", height: "75px", width: "60px"}} /></p>
+          <button onClick={backToHome}><p style={{color: "#567384"}}>Back Home</p></button>
         </div>
 
       </div>
