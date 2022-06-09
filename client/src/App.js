@@ -2,6 +2,7 @@ import React from "react";
 import { Routes, Route } from "react-router-dom";
 import Navbar from "./Components/Navbar";
 import About from "./Pages/About";
+import Home from "./Pages/Home";
 import Reservation from "./Pages/Reservation";
 // import Confirmation from "./Pages/Confirmation"
 // import Summary from "./Pages/Summary";
@@ -19,7 +20,7 @@ export default function App(){
       <Routes>
             <Route 
             exact path="/home" 
-            //element={} 
+            element={<Home/>} 
             />
             <Route 
             path="/reservation" 
