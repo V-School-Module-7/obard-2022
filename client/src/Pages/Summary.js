@@ -1,6 +1,7 @@
 import axios from "axios";
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
+import "../CSS/summaryDetails.css"
 
 const useraxios = axios.create()
 useraxios.interceptors.request.use(config => {
@@ -26,11 +27,11 @@ const Summary = ({data}) => {
   }
   const page = {
     backgroundColor: "#FFFFFF",
-    boxShadow: "0px 21px 35px rgba(121, 151, 170, 0.67)",
+    boxShadow: "10px 0px 35px rgba(121, 151, 170, 0.67)",
     //position: "absolute",
     width: "1000px",
     height: "525px",
-    //left: "100px",
+    // left: "1308.62px",
     //top: "90px",
     textAlign: "center",
     margin: "auto",
@@ -61,18 +62,18 @@ const Summary = ({data}) => {
   }, [])
   return (
     <div>
-      <h1 style={{textTransform: "uppercase", fontSize: "40px"}}>summary</h1>
+      <h1 style={{fontFamily: "Arial" ,textTransform: "uppercase", fontSize: "48px", letterSpacing: "0.2em"}}>summary</h1>
       <div style={page}>
-        <div >
-          <h2 >summary details</h2>
-          <div style={{display: "flex", justifyContent: "space-evenly"}}>
-            <div style={{display: "flex"}}>
-              <div style={{width: "130px", height: "90px", backgroundColor: "#032c45"}}></div>
+        <div className="summary-details" >
+          <h2 style={{fontFamily: "Arial", fontStyle: "normal", fontWeight:"700", fontSize: "18px", lineHeight:"21px", letterSpacing:"0.4em"}}>summary details</h2>
+          <div style={{display: "flex"}}>
+            <div style={{display: "flex", marginRight: "300px"}}>
+              <div style={{width: "130px", height: "90px", backgroundColor: "#032c45", marginRight:"10px"}}></div>
               <h5>piper arrow II</h5>
             </div>
-            <div>
-              <h5>start: {scheduledEvent.start_time}</h5>
-              <h5>end: {scheduledEvent.start_time}</h5>
+            <div className="time-cost">
+              <h5>start: <b>{scheduledEvent.start_time}</b></h5>
+              <h5>end: <b>{scheduledEvent.start_time}</b></h5>
               <h5>estimated cost: </h5>
             </div>
           </div>
