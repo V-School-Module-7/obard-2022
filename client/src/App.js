@@ -13,18 +13,22 @@ import "./app.css"
 
 
 export default function App(){
-  
+
   return (
     <div >
       <Navbar />
       <Routes>
-            <Route 
-            exact path="/home" 
-            element={<Home/>} 
+            <Route
+            exact path="/home"
+            element={<Home/>}
             />
-            <Route 
-            path="/reservation" 
-            element={<Reservation />} 
+            <Route
+            path="/reservation"
+            element={<Reservation />}
+            />
+            <Route
+            path='/about'
+            element={<About/>}
             />
             <Route
             path="/payment"
