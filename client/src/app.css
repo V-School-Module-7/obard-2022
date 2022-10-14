@@ -12,7 +12,7 @@ html {
   list-style: none;
   display: flex;
   justify-content: space-between;
-  
+
   text-transform: uppercase;
   color: #9CB9CA;
   text-decoration: none;
@@ -45,3 +45,19 @@ h1{
   font-family: Arial, Helvetica, sans-serif;
 }
 
+.reservation {
+  text-align: center;
+  min-width: min-content;
+  width: 100%;
+  min-height: 500px;
+}
+
+.reservation > iframe {
+  /* border: 1rem solid black; */
+  width: 100%;
+  /* min-width: 50%; */
+  min-height: 500px;
+  padding: 2rem 0;
+  margin: 0;
+  border: 0;
+}

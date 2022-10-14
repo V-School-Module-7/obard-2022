@@ -32,13 +32,13 @@ const Reservation = () => {
     setReserved(true)
   }
   return (
-    <>
-    {!reserved?
+    <div className="reservation">
+    {/* {!reserved?
       <>
         <h1 style={{textTransform: "uppercase", fontSize: "40px"}}>select days and times</h1>
         <div style={contentWrapper}>
           <div style={{margin: "auto"}}>
-            <CalendlyEventListener 
+            <CalendlyEventListener
               // onDateAndTimeSelected={eventScheduled}
               onEventScheduled={eventScheduled}
               >
@@ -54,8 +54,16 @@ const Reservation = () => {
       </>
       :
       <Summary data={eventData} />
-    }
-    </>
+    } */}
+
+      <iframe
+        id="bookingcalendar"
+        title="webReserve"
+        src="https://secure.webreserv.com/services/bookingcalendar.do?businessid=o-dplanerental&embedded=y&search=1&avgrid=y&&color=3E6B87&bgcolor=9CB9CA&bcolor=FFFFFF"
+        // src="https://secure.webreserv.com/services/bookingcalendar.do?businessid=o-dplanerental&embedded=y&search=1&avgrid=y&&color=3E6B87&bgcolor=9CB9CA&bcolor=FFFFFF"
+        >
+      </iframe>
+    </div>
   )
 }
 export default Reservation
